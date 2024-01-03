@@ -1,0 +1,74 @@
+{
+  "name": "GentAIChatbot",
+  "homepage": "",
+  "keywords": [
+    "react",
+    "chat",
+    "chatbot",
+    "conversational-bot",
+    "frontend-library"
+  ],
+  "files": [
+    "./dist"
+  ],
+  "version": "1.0.6",
+  "description": "Enrich Conversations - Power & Flexibility at Your Fingertips!",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./dist/gentai.css": {
+      "import": "./dist/gentai.css",
+      "require": "./dist/genyai.css"
+    }
+  },
+  "scripts": {
+    "lint": "eslint . --ext .tsx",
+    "test": "node ./test/RunTests.js",
+    "build": "tsc && vite build && cp ./dist/index.d.ts ./dist/index.d.cts",
+    "prepublishOnly": "tsc && vite build && cp ./dist/index.d.ts ./dist/index.d.cts",
+    "prepack": "tsc && vite build && cp ./dist/index.d.ts ./dist/index.d.cts",
+    "start": "vite serve"
+  },
+  "author": "juyel",
+  "license": "IM",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JuyelHaq/im-chatbot.git"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.14",
+    "@types/react-dom": "^18.2.6",
+    "@typescript-eslint/eslint-plugin": "^5.60.1",
+    "@vitejs/plugin-react": "^4.0.4",
+    "chromedriver": "^119.0.1",
+    "eslint": "^8.43.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-react": "^7.32.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "selenium-webdriver": "^4.11.1",
+    "typescript": "^5.1.6",
+    "vite": "^4.4.9",
+    "vite-plugin-dts": "^3.4.0",
+    "vite-plugin-svgr": "^3.2.0"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
